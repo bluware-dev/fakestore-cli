@@ -43,9 +43,9 @@ npm install # o pnpm install
 
 ```bash
 # Uso
-npm start <COMMAND> [args]
+npm start <COMANDO> [args]
 # o
-pnpm start <COMMAND> [args]
+pnpm start <COMANDO> [args]
 ```
 
 ---
@@ -66,11 +66,11 @@ pnpm start <COMMAND> [args]
 
 <h3 align="center">⛳️ Flags</h3>
 
-| Flag           | Descripción                                                      |
-| -------------- | ---------------------------------------------------------------- |
-| `-h`, `--help` | Muestra ayuda global o contextual (usar `npm start help` en NPM) |
-| `--no-ansi`    | Desactiva colores en consola                                     |
-| `--debug`      | Habilita modo depuración (usar `npm run debug ...[args]` en NPM) |
+| Flag           | Descripción                                                            |
+| -------------- | ---------------------------------------------------------------------- |
+| `-h`, `--help` | Muestra ayuda global o contextual (usar `npm start help` en NPM)       |
+| `--no-ansi`    | Desactiva colores en consola (usar `npm start -- --no-ansi ...[args]`) |
+| `--debug`      | Habilita modo depuración (usar `npm run debug ...[args]` en NPM)       |
 
 </div>
 

@@ -1,5 +1,5 @@
 {
-	"name": "pre-entrega",
+	"name": "fakestore-cli",
 	"version": "1.0.0",
 	"type": "module",
 	"description": "CLI minimalista donde se consume la API de FakeStore via CLI",
