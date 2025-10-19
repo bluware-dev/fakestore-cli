@@ -44,6 +44,6 @@ try {
 } catch (err) {
 	log.error(`Hubo un problema en la ejecucion del CLI: ${err.message}`);
 	log.info(
-		`Para mas ayuda usa: ${chalk.bold.green('[npm, pnpm] start --help')}`
+		`Para mas ayuda usa: ${chalk.bold.green('[npm, pnpm] start help')}`
 	);
 }

@@ -23,7 +23,7 @@ export async function executeAPI(args) {
 	const endpoint = args[1];
 	const method = args[0].toUpperCase();
 
-	if (['-h', '--help'].includes(endpoint)) {
+	if (['-h', '--help', 'help', 'HELP'].includes(endpoint)) {
 		log.debug('Redirigiendo a: displayHelp', 'yellow');
 		return displayHelp(args[0]);
 	}

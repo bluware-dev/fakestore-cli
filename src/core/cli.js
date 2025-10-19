@@ -26,7 +26,7 @@ const CLI_LAYOUT = {
 	},
 	HELP: {
 		fn: displayHelp,
-		args: ['-h', '--help'],
+		args: ['-h', '--help', 'help', 'HELP'],
 		operands: null, // No acepta argumentos posicionales
 	},
 };
@@ -34,7 +34,7 @@ const CLI_LAYOUT = {
 export default function fakeStoreCLI(args) {
 	if (!args.length) {
 		log.error(
-			`No se indico ninguna opción. Usa: ${chalk.bold.green('[npm, pnpm] start --help')}`
+			`No se indico ninguna opción. Usa: ${chalk.bold.green('[npm, pnpm] start help')}`
 		);
 		return 1;
 	}
@@ -55,7 +55,7 @@ export default function fakeStoreCLI(args) {
 				: 'No existe un metodo llamado: ') + chalk.yellow(args[0])
 		);
 		log.info(
-			`Para mas ayuda usa: ${chalk.bold.green('[npm, pnpm] start --help')}`
+			`Para mas ayuda usa: ${chalk.bold.green('[npm, pnpm] start help')}`
 		);
 		return 1;
 	}

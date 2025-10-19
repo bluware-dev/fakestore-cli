@@ -11,7 +11,9 @@ import { HELP_TEMPLATES } from '../templates.js';
 
 export function displayHelp(template) {
 	template = typeof template === 'object' ? template[0] : template;
-	template = ['-h', '--help'].includes(template) ? 'GLOBAL' : template;
+	template = ['-h', '--help', 'help', 'HELP'].includes(template)
+		? 'GLOBAL'
+		: template;
 
 	if (!Object.keys(HELP_TEMPLATES).includes(template)) {
 		log.error(`No se encontro ayuda para un comando: '${template}'`);

@@ -15,11 +15,11 @@ ${chalk.bold('Metodos:')}
 	${chalk.bold.green('DELETE')}       Eliminar un producto     ${chalk.yellow('[products/<id>]')}
 
 ${chalk.bold('Flags:')}
-	${chalk.bold.green('-h, --help')}    Muestra este mensaje
+	${chalk.bold.green('-h, --help')}    Muestra este mensaje (NPM: 'npm start help')
 	${chalk.bold.green('--no-ansi')}     Deshabilita colores y estilos ANSI
-	${chalk.bold.green('--debug')}       Habilita modo depuración
+	${chalk.bold.green('--debug')}       Habilita modo depuración  (NPM: 'npm run debug ...args')
 
-Para mas detalles y ejemplos usa: ${chalk.bold.yellow(`npm start ${chalk.bold.green('{COMANDO}')} --help`)}')
+Para mas detalles y ejemplos usa: ${chalk.bold.yellow(`[npm, pnpm] start ${chalk.bold.green('{COMANDO}')} help`)}
 `,
 
 	POST: () => `${chalk.bold('Uso:')}
@@ -55,7 +55,7 @@ ${chalk.bold('Parámetros: (opcionales)')}
 	${chalk.bold.yellow('<image>')}        Nueva URL de imagen del producto  
 
 ${chalk.bold('Ejemplo:')}  
-${chalk.cyan('[npm, pnpm] start PUT products/12 "Teclado Mecánico" 99.99 "Periféricos" "Switches azules" "https://img.com/keyboard.jpg"')}
+${chalk.cyan('[npm, pnpm] -- start PUT products/12 "Teclado Mecánico" 99.99 "Periféricos" "Switches azules" "https://img.com/keyboard.jpg"')}
 
 Si se envía una petición sin parámetros solo se devolverá ${chalk.yellow('{ id: <id> }')}
 `,

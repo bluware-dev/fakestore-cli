@@ -54,23 +54,23 @@ pnpm start <COMMAND> [args]
 
 <h3 align="center">📜 Comandos disponibles</h3>
 
-| Método             | Descripción                 | Ejemplo                                        |
-| ------------------ | --------------------------- | ---------------------------------------------- |
-| 🟢 **POST**        | Crear un producto           | `npm start POST products "Camisa" 29.99 ropa`  |
-| 🟡 **PUT**         | Actualizar un producto      | `npm start PUT products/1 "Camisa" 39.99 ropa` |
-| 🔵 **GET**         | Obtener un producto o lista | `npm start GET products/1`                     |
-| 🔴 **DELETE**      | Eliminar un producto        | `npm start DELETE products/1`                  |
-| 🧩 **HELP** (flag) | Mostrar ayuda contextual    | `npm start POST --help`                        |
+| Método        | Descripción                 | Ejemplo                                        |
+| ------------- | --------------------------- | ---------------------------------------------- |
+| 🟢 **POST**   | Crear un producto           | `npm start POST products "Camisa" 29.99 ropa`  |
+| 🟡 **PUT**    | Actualizar un producto      | `npm start PUT products/1 "Camisa" 39.99 ropa` |
+| 🔵 **GET**    | Obtener un producto o lista | `npm start GET products/1`                     |
+| 🔴 **DELETE** | Eliminar un producto        | `npm start DELETE products/1`                  |
+| 🧩 **HELP**   | Mostrar ayuda contextual    | `npm start POST help`                          |
 
 ---
 
 <h3 align="center">⛳️ Flags</h3>
 
-| Flag           | Descripción                       |
-| -------------- | --------------------------------- |
-| `-h`, `--help` | Muestra ayuda global o contextual |
-| `--no-ansi`    | Desactiva colores en consola      |
-| `--debug`      | Habilita modo depuración          |
+| Flag           | Descripción                                                      |
+| -------------- | ---------------------------------------------------------------- |
+| `-h`, `--help` | Muestra ayuda global o contextual (usar `npm start help` en NPM) |
+| `--no-ansi`    | Desactiva colores en consola                                     |
+| `--debug`      | Habilita modo depuración (usar `npm run debug ...[args]` en NPM) |
 
 </div>
 
