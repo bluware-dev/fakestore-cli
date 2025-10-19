@@ -46,7 +46,7 @@ export function buildBind(args, layout) {
 			bind.args.some((arg) => args.includes(arg)) ? bind.fn : null
 		)
 		.filter(Boolean)[0];
-	const metadata = layout.filter((bind) => bind.fn == executable)[0];
+	const metadata = layout.filter((bind) => bind.args.includes(args[0]))[0];
 
 	return { executable, metadata };
 }
