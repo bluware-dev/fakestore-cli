@@ -11,7 +11,7 @@ export async function fetchAPI(route, payload) {
 		.catch((err) => {
 			if (err.message.includes('Unexpected')) {
 				log.error(
-					`Datos mal formateados o recurso no disponible (Usa: ${chalk.bold.green(`[npm, pnpm] start ${payload.method} --help`)})`
+					`Datos mal formateados o recurso no disponible (Usa: ${chalk.bold.green(`[npm, pnpm] start ${payload.method} help`)})`
 				);
 				return 1;
 			}

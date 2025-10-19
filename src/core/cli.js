@@ -2,7 +2,7 @@ import { chalk, log } from '../index.js';
 import { executeAPI } from './api.js';
 import { displayHelp, validateArgs, buildBind } from './system.js';
 
-// El orden del layout importa: el comando de ayuda global se evalua al final, se prioriza de forma local ([npm, pnpm] start {CMD} --help)
+// El orden del layout importa: el comando de ayuda global se evalua al final, se prioriza de forma local ([npm, pnpm] start {CMD} help)
 const CLI_LAYOUT = {
 	POST: {
 		fn: executeAPI,
@@ -26,7 +26,7 @@ const CLI_LAYOUT = {
 	},
 	HELP: {
 		fn: displayHelp,
-		args: ['-h', '--help', 'help', 'HELP'],
+		args: ['-h', '--help', 'help', 'HELP'], // Soporte para NPM con 'help'
 		operands: null, // No acepta argumentos posicionales
 	},
 };
