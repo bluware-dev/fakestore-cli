@@ -58,7 +58,7 @@ pnpm start <COMANDO> [args]
 | ------------- | --------------------------- | ---------------------------------------------- |
 | 🟢 **POST**   | Crear un producto           | `npm start POST products "Camisa" 29.99 ropa`  |
 | 🟡 **PUT**    | Actualizar un producto      | `npm start PUT products/1 "Camisa" 39.99 ropa` |
-| 🔵 **GET**    | Obtener un producto o lista | `npm start GET products/1`                     |
+| 🔵 **GET**    | Obtener un producto         | `npm start GET products/1`                     |
 | 🔴 **DELETE** | Eliminar un producto        | `npm start DELETE products/1`                  |
 | 🧩 **HELP**   | Mostrar ayuda contextual    | `npm start POST help`                          |
 
@@ -68,9 +68,9 @@ pnpm start <COMANDO> [args]
 
 | Flag           | Descripción                                                            |
 | -------------- | ---------------------------------------------------------------------- |
-| `-h`, `--help` | Muestra ayuda global o contextual (usar `npm start help` en NPM)       |
-| `--no-ansi`    | Desactiva colores en consola (usar `npm start -- --no-ansi ...[args]`) |
-| `--debug`      | Habilita modo depuración (usar `npm run debug ...[args]` en NPM)       |
+| `-h`, `--help` | Muestra ayuda global o contextual (NPM: `npm start help`)              |
+| `--no-ansi`    | Desactiva colores en consola (NPM: `npm start -- --no-ansi ...[args]`) |
+| `--debug`      | Habilita modo depuración (NPM: `npm run debug ...[args]`)              |
 
 </div>
 
@@ -128,7 +128,7 @@ Este repositorio, su código y estructura se inspira en la filosofía UNIX:
 </br>
 <code>"Escribe programas que hagan una cosa y la hagan bien. Escribe programas para trabajar juntos. Escribe programas para manejar flujos de texto, porque esa es una interfaz universal"</code>
 </br>
-En el caso de este repositorio: código legible, declarativo/funcional y modular (pero sin excederse dado el minimalismo de la tarea).
+En el caso de este repositorio: código legible, declarativo/funcional y modular (pero sin excederse dado el minimalismo de la tarea a realizar).
 </em>
 </p>
 

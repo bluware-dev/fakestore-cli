@@ -28,25 +28,27 @@ export function displayHelp(template) {
  * Construye funciones y configuraciones.
  */
 
+// Determinar función ejecutable y construir su metadata en base a los argumentos y layout otorgados
 export function buildBind(args, layout) {
 	if (!layout.length) throw new Error('No se dio un Layout');
 
 	const keysLayout = ['fn', 'args', 'operands'];
 	if (
-		!layout.every((meta) =>
-			keysLayout.every((key) => Object.keys(meta).includes(key))
+		!layout.every(
+			(meta) => keysLayout.every((key) => Object.keys(meta).includes(key)) // Si no hay un Layout valido...
 		)
 	)
 		throw new Error(
 			'System: Inconsistencia en layout, revisa integridad y verifica si la función/metadata es valida'
 		);
 
+	// executable es un "binding" de la correspondiente función a ejecutar.
 	const executable = layout
 		.map((bind) =>
 			bind.args.some((arg) => args.includes(arg)) ? bind.fn : null
-		)
-		.filter(Boolean)[0];
-	const metadata = layout.filter((bind) => bind.args.includes(args[0]))[0];
+		) // Mapea las funciones correspondientes a los argumentos proporcionados
+		.filter(Boolean)[0]; // Filtra opciones correctas y devuelve la primera (si no hay, devuelve undefined <- falsy)
+	const metadata = layout.filter((bind) => bind.args.includes(args[0]))[0]; // Construimos metadata para validar qué argumento disparó el build
 
 	return { executable, metadata };
 }
@@ -68,7 +70,7 @@ export function buildPrettyJSON(config) {
 
 /**
  * @category Validator
- * Determina si un argumento corresponde a una opción de ayuda.
+ * Se encargan de validar entradas
  */
 
 export const isMainModule = (argv, url) => argv === fileURLToPath(url);
