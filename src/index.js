@@ -38,7 +38,7 @@ export const chalk = config.useColor
 log.debug('Se inicializó un Logger con la siguiente configuración:', 'green');
 log.stdout(prettyJSON(config), 'bold', false, true);
 
-// Si es main entonces procedemos a ejecutar en produccion
+// Si es main entonces procedemos a ejecutar el CLI
 try {
 	if (isMain) process.exit(await fakeStoreCLI(args));
 } catch (err) {

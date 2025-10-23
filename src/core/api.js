@@ -1,7 +1,7 @@
 import { chalk, log, prettyJSON } from '../index.js';
 import { displayHelp } from './system.js';
 
-export async function fetchAPI(route, payload) {
+function fetchAPI(route, payload) {
 	return fetch(`https://fakestoreapi.com/${route}`, payload)
 		.then((res) => res.json())
 		.then((res) => {
